@@ -1,0 +1,49 @@
+{
+    "expo": {
+      "name": "APP NAME",
+      "slug": "SLUG",
+      "version": "APP VERSION",
+      "orientation": "portrait",
+      "icon": "ICON PNG",
+      "scheme": "SCHEME NAME",
+      "userInterfaceStyle": "automatic",
+      "splash": {
+        "image": "SPLASCH SCREEN PATH",
+        "resizeMode": "contain"
+      },
+      "assetBundlePatterns": ["**/*"],
+      "ios": {
+        "supportsTablet": true,
+        "googleServicesFile": "GOOGLE SERVICES FILE FOR IOS",
+        "bundleIdentifier": "BUNDLE IDENTIFIER"
+      },
+      "android": {
+        "adaptiveIcon": {
+          "foregroundImage": "ADAPTATIVE ICON PATH",
+          "backgroundColor": "#FFFFFF"
+        },
+        "googleServicesFile": "GOOGLE SERVICES FILE FOR ANDROID",
+        "package": "PACKAGE NAME"
+      },
+      "plugins": [
+        "expo-router",
+        "expo-font",
+        "expo-secure-store",
+        "@react-native-firebase/app",
+        "@react-native-firebase/auth"
+      ],
+      "experiments": {
+        "typedRoutes": true
+      },
+      "extra": {
+        "router": {
+          "origin": false
+        },
+        "eas": {
+          "projectId": "EAS PROJECT ID"
+        }
+      },
+      "owner": "OWNER's NAME"
+    }
+  }
+  
