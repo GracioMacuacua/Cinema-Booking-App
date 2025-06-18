@@ -1,5 +1,6 @@
-import React, { StyleSheet, TouchableOpacity } from "react-native";
 import { NativeStackHeaderProps } from "@react-navigation/native-stack";
+import React, { StyleSheet, TouchableOpacity } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { MaterialIcons } from "@expo/vector-icons";
 import { useColorScheme } from "react-native";
 import { View, Text } from "../Themed";
@@ -39,7 +40,7 @@ const styles = StyleSheet.create({
       height: -1,
     },
     shadowOpacity: 0.1,
-    elevation: 1,                                                                                                                                                                                      
+    elevation: 1,
   },
   button: {
     width: 50,

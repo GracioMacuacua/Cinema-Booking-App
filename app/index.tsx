@@ -1,4 +1,5 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { RFValue } from "react-native-responsive-fontsize";
 import { useGlobalData } from "@/context/GlobalData";
 import React, { useEffect, useState } from "react";
 import { View, Text } from "@/components/Themed";
@@ -8,6 +9,7 @@ import Swiper from "react-native-swiper";
 import Colors from "@/constants/Colors";
 import { Redirect } from "expo-router";
 import { Image } from "expo-image";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const Home = () => {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -41,7 +43,7 @@ const Home = () => {
       {hasLaunched ? (
         <Redirect href={"/login"} />
       ) : (
-        <View style={styles.container}>
+        <>
           <Swiper
             loop={false}
             dotColor={Colors.baseColors.dot}
@@ -70,12 +72,16 @@ const Home = () => {
                   />
                 </View>
                 <View style={styles.slide}>
-                  <Image style={styles.slideImage} source={SLIDES[i].image} />
+                  <Image
+                    style={styles.slideImage}
+                    source={SLIDES[i].image}
+                    cachePolicy={"disk"}
+                  />
                 </View>
               </View>
             ))}
           </Swiper>
-        </View>
+        </>
       )}
     </>
   );
@@ -84,23 +90,19 @@ const Home = () => {
 export default Home;
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   content: {
     flexDirection: "column",
-    marginTop: 30,
     marginHorizontal: 20,
     marginBottom: 10,
     gap: 10,
   },
   title: {
     fontFamily: "PoppinsBold",
-    fontSize: 30,
+    fontSize: RFValue(28),
   },
   text: {
     fontFamily: "PoppinsRegular",
-    fontSize: 16,
+    fontSize: RFValue(14),
   },
   skipButton: {
     maxWidth: 80,

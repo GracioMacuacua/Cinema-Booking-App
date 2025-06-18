@@ -1,18 +1,18 @@
+import { LinkButton, ExtendedButton } from "@/components/Button";
+import { FontAwesome6 } from "@expo/vector-icons";
+import { Text, View } from "@/components/Themed";
+import TextInput from "@/components/TextInput";
+import { Link, router } from "expo-router";
+import Screen from "@/components/Screen";
 import React, { useState } from "react";
+import Colors from "@/constants/Colors";
+import { Image } from "expo-image";
 import {
   StyleSheet,
   KeyboardAvoidingView,
   ToastAndroid,
   Platform,
 } from "react-native";
-import { LinkButton, ExtendedButton } from "@/components/Button";
-import { FontAwesome6 } from "@expo/vector-icons";
-import { Text, View } from "@/components/Themed";
-import TextInput from "@/components/TextInput";
-import Screen from "@/components/Screen";
-import Colors from "@/constants/Colors";
-import { Image } from "expo-image";
-import { Link, router } from "expo-router";
 
 const Login = () => {
   const [fetching, setFetching] = useState(false);
@@ -20,12 +20,11 @@ const Login = () => {
   const GoogleIcon = require("../assets/images/googleicon.png");
 
   const handleSubmit = () => {
-    // setFetching(true);
-    // setTimeout(() => {
-    //   setFetching(false);
-      
-    // }, 3000);
-    router.replace("/home");
+    setFetching(true);
+    setTimeout(() => {
+      setFetching(false);
+      router.replace("/home");
+    }, 100);
   };
 
   return (
@@ -37,7 +36,13 @@ const Login = () => {
       >
         <View style={styles.header}>
           <View style={styles.imageContainer}>
-            <Image source={AppIcon} style={{ width: 120, height: 120 }} />
+            <Image
+              source={AppIcon}
+              style={{
+                width: 120,
+                height: 120,
+              }}
+            />
           </View>
           <Text style={styles.title}>Bem vindo</Text>
           <Text style={styles.text}>

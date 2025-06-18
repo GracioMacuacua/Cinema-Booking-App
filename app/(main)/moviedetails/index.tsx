@@ -30,13 +30,13 @@ const Movie = () => {
   const { id } = useLocalSearchParams();
   const { data, isLoading, error } = useQuery<MovieProps>("movie", () => {
     return axios
-      .get(`http://192.168.171.108:3000/movies/${id}`)
+      .get(process.env.EXPO_PUBLIC_API_URL + `/movies/${id}`)
       .then((response) => response.data);
   });
   const CARD_WIDTH = Dimensions.get("screen").width * 0.65;
 
   const handlePress = () => {
-    router.push({ pathname: "/selectseats", params: { movieid: "se5rsg4rg" } });
+    router.push({ pathname: "/selectseats", params: { movieId: id } });
   };
 
   return (
@@ -47,66 +47,64 @@ const Movie = () => {
         paddingTop: 10,
       }}
     >
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "space-between",
-            marginBottom: 15,
-          }}
-        >
-          <Image
-            source={data?.cover}
-            style={[
-              {
-                width: CARD_WIDTH,
-                height: CARD_WIDTH + 40,
-              },
-              styles.cover,
-            ]}
-            contentFit="cover"
-          />
-          <View style={styles.column}>
-            <ColumnItem>
-              <Ionicons
-                name="videocam-outline"
-                color={Colors.baseColors.button}
-                size={32}
-              />
-              <Text style={styles.columnItemText}>Gênero</Text>
-              <Text style={styles.bold}>{data?.genre}</Text>
-            </ColumnItem>
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "space-between",
+          marginBottom: 15,
+        }}
+      >
+        <Image
+          source={data?.cover}
+          style={[
+            {
+              width: CARD_WIDTH,
+              height: CARD_WIDTH + 40,
+            },
+            styles.cover,
+          ]}
+          contentFit="cover"
+        />
+        <View style={styles.column}>
+          <ColumnItem>
+            <Ionicons
+              name="videocam-outline"
+              color={Colors.baseColors.button}
+              size={32}
+            />
+            <Text style={styles.columnItemText}>Gênero</Text>
+            <Text style={styles.bold}>{data?.genre}</Text>
+          </ColumnItem>
 
-            <ColumnItem>
-              <MaterialIcons
-                name="access-time"
-                color={Colors.baseColors.button}
-                size={32}
-              />
-              <Text style={styles.columnItemText}>Duração</Text>
-              <Text style={styles.bold}>{data?.duration}</Text>
-            </ColumnItem>
+          <ColumnItem>
+            <MaterialIcons
+              name="access-time"
+              color={Colors.baseColors.button}
+              size={32}
+            />
+            <Text style={styles.columnItemText}>Duração</Text>
+            <Text style={styles.bold}>{data?.duration}</Text>
+          </ColumnItem>
 
-            <ColumnItem>
-              <AntDesign
-                name="staro"
-                color={Colors.baseColors.button}
-                size={32}
-              />
-              <Text style={styles.columnItemText}>Pontuação</Text>
-              <Text style={styles.bold}>{data?.classification}</Text>
-            </ColumnItem>
-          </View>
+          <ColumnItem>
+            <AntDesign
+              name="staro"
+              color={Colors.baseColors.button}
+              size={32}
+            />
+            <Text style={styles.columnItemText}>Pontuação</Text>
+            <Text style={styles.bold}>{data?.classification}</Text>
+          </ColumnItem>
         </View>
-        <View>
-          <Text style={styles.title}>{data?.title}</Text>
-          <Text style={[styles.columnItemText, { fontSize: 16 }]}>{}</Text>
-        </View>
-        <View style={{ marginTop: 10 }}>
-          <Text style={styles.title}>Sinopse</Text>
-          <Text style={styles.sinopsis}>{data?.sinopsis}</Text>
-        </View>
-      </ScrollView>
+      </View>
+      <View>
+        <Text style={styles.title}>{data?.title}</Text>
+        {/* <Text style={[styles.columnItemText, { fontSize: 16 }]}>{}</Text> */}
+      </View>
+      <View style={{ marginTop: 10 }}>
+        <Text style={styles.title}>Sinopse</Text>
+        <Text style={styles.sinopsis}>{data?.sinopsis}</Text>
+      </View>
       <ExtendedButton
         text="Selecionar Assento"
         style={{

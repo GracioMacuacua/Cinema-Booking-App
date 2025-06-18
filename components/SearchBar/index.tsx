@@ -5,7 +5,6 @@ import { View, TextInput } from "@/components/Themed";
 import {
   StyleSheet,
   ViewStyle,
-  TextInputProps,
   useColorScheme,
 } from "react-native";
 

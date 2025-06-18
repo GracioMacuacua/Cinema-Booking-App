@@ -6,28 +6,46 @@ import Listing from "@/components/Listing";
 import { View } from "@/components/Themed";
 import * as MovieCard from "@/components/Cards/MovieCard";
 
-const Latest = () => {
-  const { data, isLoading, error } = useQuery<MovieCard.MovieCardProps[]>(
-    "latest",
-    () => {
-      return axios
-        .get("http://192.168.171.108:3000/movies")
-        .then((response) => response.data);
-    }
-  );
+const LatestMovies = () => {
+  const {
+    data: latest,
+    isLoading,
+    error,
+  } = useQuery<MovieCard.MovieCardProps[]>("latest", () => {
+    return axios
+      .get(process.env.EXPO_PUBLIC_API_URL + "/movies")
+      .then((response) => response.data);
+  });
 
   // CARD_WIDTH = (SCREEN_WIDTH - MAIN_CONTAINER_PADDING (LEFT + RIGHT) - LIST_CONTAINER_GAP) / 2
   const CARD_WIDTH = (Dimensions.get("screen").width - 55) / 2;
 
   return (
     <View style={{ flex: 1 }}>
-      <Listing
-        column="double"
-        data={data ?? []}
-        card={({ item }) => <MovieCard.Card data={item} cardWidth={CARD_WIDTH} />}
-      />
+      {isLoading ? (
+        <View
+          style={{
+            flex: 1,
+            flexDirection: "row",
+            flexWrap: "wrap",
+            paddingTop: 15,
+            paddingHorizontal: 20,
+            gap: 15,
+          }}
+        >
+          <MovieCard.Loader width={CARD_WIDTH} count={6} />
+        </View>
+      ) : (
+        <Listing
+          column="double"
+          data={latest ?? []}
+          card={({ item }) => (
+            <MovieCard.Card data={item} cardWidth={CARD_WIDTH} />
+          )}
+        />
+      )}
     </View>
   );
 };
 
-export default Latest;
+export default LatestMovies;

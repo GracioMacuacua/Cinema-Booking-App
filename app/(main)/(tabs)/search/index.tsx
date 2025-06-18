@@ -6,9 +6,12 @@ import SearchResultCard, {
   SearchDataProps,
 } from "@/components/Cards/SearchResultCard";
 import SearchBar from "@/components/SearchBar";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { View } from "@/components/Themed";
+import { TextInput } from "react-native";
 
 const Search = React.memo(() => {
+  const inputRef = useRef<TextInput>(null);
   const [searchText, setSearchText] = useState("");
   const [debounceSearchText, setDebounceSearchText] = useState("");
 
@@ -16,14 +19,19 @@ const Search = React.memo(() => {
     ["searchresults", debounceSearchText],
     async () => {
       const response = await axios.get(
-        `http://192.168.171.108:3000/movies?title=${debounceSearchText}`
+        process.env.EXPO_PUBLIC_API_URL +
+          `/movies?title_like=${debounceSearchText}`
       );
       return response.data;
     },
     { enabled: !!debounceSearchText }
   );
 
-  console.log(data, isLoading);
+  useEffect(() => {
+    return () => {
+      setSearchText("");
+    };
+  }, []);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -36,14 +44,21 @@ const Search = React.memo(() => {
   }, [searchText]);
 
   return (
-    <Screen style={{ alignItems: "center", gap: 20 }}>
-      <SearchBar onChangeText={(text) => setSearchText(text)} />
+    <View
+      style={{
+        height: "100%",
+        paddingHorizontal: 15,
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <SearchBar onChangeText={setSearchText} />
       <Listing
         column="single"
         data={data ?? []}
         card={({ item }) => <SearchResultCard data={item} />}
       />
-    </Screen>
+    </View>
   );
 });
 

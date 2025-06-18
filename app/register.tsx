@@ -1,18 +1,18 @@
+import RegisterModal from "@/components/Modal/RegisterModal";
+import { ExtendedButton } from "@/components/Button";
+import Screen from "@/components/Screen";
+import { Text, View } from "@/components/Themed";
+import TextInput from "@/components/TextInput";
 import React, { useState } from "react";
+import Colors from "@/constants/Colors";
+import { Image } from "expo-image";
+import { Link } from "expo-router";
+import { styles } from "./login";
 import {
   GestureResponderEvent,
   KeyboardAvoidingView,
   Platform,
 } from "react-native";
-import RegisterModal from "@/components/Modal/RegisterModal";
-import { ExtendedButton, LinkButton } from "@/components/Button";
-import { Text, View } from "@/components/Themed";
-import TextInput from "@/components/TextInput";
-import Screen from "@/components/Screen";
-import { Image } from "expo-image";
-import { Link } from "expo-router";
-import { styles } from "./login";
-import Colors from "@/constants/Colors";
 
 type DataProps = {
   fullName: string;

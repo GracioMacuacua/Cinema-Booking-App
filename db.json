@@ -1,0 +1,1146 @@
+{
+    "movies": [
+        {
+            "id": "hjf2red3r",
+            "title": "Vingadores: Guerra Infinita",
+            "genre": "Ação",
+            "duration": "2h:29m",
+            "classification": "8.4/10",
+            "cover": "https://image.tmdb.org/t/p/original/A4kvp7vY1BDLrrQIagRCffLKj1t.jpg",
+            "origin": "Filme de Hollywood",
+            "language": [
+                "Português",
+                "Inglês"
+            ],
+            "sinopsis": "Homem de Ferro, Thor, Hulk e os Vingadores se unem para combater seu inimigo mais poderoso, o maligno Thanos. Em uma missão para coletar todas as seis pedras infinitas, Thanos planeja usá-las para infligir sua vontade maléfica sobre a realidade."
+        },
+        {
+            "id": "hjf2re03r",
+            "title": "Aquaman 2: O Reino Perdido",
+            "genre": "Ação",
+            "duration": "2h:04m",
+            "classification": "5.6/10",
+            "cover": "https://image.tmdb.org/t/p/original/ysHxydAZzfhc4kV5ae8IBbVG5gk.jpg",
+            "origin": "Filme de Hollywood",
+            "language": [
+                "Hindi",
+                "Inglês"
+            ],
+            "sinopsis": "Agora mais temível do que nunca, Arraia Negra detém o poder do mítico Tridente Preto e sua ancestral força malévola. Para derrotá-lo, Aquaman recorrerá a seu irmão Orm, o ex-Rei da Atlântida, ainda na prisão, para forjar uma aliança improvável. Juntos, eles vão ter que deixar de lado suas diferenças para proteger seu reino, salvar a família de Aquaman e o mundo da irreversível destruição."
+        },
+        {
+            "id": "hjf2eed3r",
+            "title": "Argylle: O Super Espião",
+            "genre": "Ação",
+            "duration": "2h:19m",
+            "classification": "5.7/10",
+            "cover": "https://image.tmdb.org/t/p/original/1ojCiMpYmCciIFuEcgLOOGLbUND.jpg",
+            "origin": "Filme de Hollywood",
+            "language": [
+                "Francês",
+                "Espanhol"
+            ],
+            "sinopsis": "Quando os enredos dos romances de espionagem da reclusa autora Elly Conway começam a refletir as ações secretas de uma organização de espionagem da vida real, as noites tranquilas em casa tornam-se uma coisa do passado. Acompanhada por seu gato Alfie e Aiden, um espião alérgico a gatos, Elly corre pelo mundo para ficar um passo à frente dos assassinos enquanto a linha entre o mundo fictício de Conway e o mundo real começa a se confundir."
+        },
+        {
+            "id": "hxf2red3r",
+            "title": "Missão Impossivel: Acerto de Contas Parte Um",
+            "genre": "Ação",
+            "duration": "2h:43m",
+            "classification": "7.7/10",
+            "cover": "https://image.tmdb.org/t/p/original/gbPUEuu2MGzbVen3tB1S48HpgDP.jpg",
+            "origin": "Filme de Hollywood",
+            "language": [
+                "Português",
+                "Inglês",
+                "Italiano"
+            ],
+            "sinopsis": "Ethan Hunt e sua equipe embarcam em sua missão mais perigosa: rastrear uma nova arma aterrorizante que ameaça toda a humanidade antes que caia em mãos erradas. Com o controle do futuro e o destino do mundo em jogo e as forças sombrias do passado de Ethan se aproximando, uma corrida mortal ao redor do globo começa. Confrontado por um inimigo misterioso e todo-poderoso, Ethan é forçado a considerar que nada pode importar mais do que sua missão – nem mesmo a vida daqueles com quem ele mais se importa."
+        },
+        {
+            "id": "hvf2red3r",
+            "title": "Resgate em Medelín",
+            "genre": "Comédia",
+            "duration": "1h:44m",
+            "classification": "4.9/10",
+            "cover": "https://image.tmdb.org/t/p/original/i0Ulb13yY2WCcZ047iThR0dtMd5.jpg",
+            "origin": "Filme de Hollywood",
+            "language": [
+                "Português",
+                "Espanhol"
+            ],
+            "sinopsis": "Para salvar seu irmão mais novo de um perigoso quartel em Medelín, Reda (Ramzy Bedia) tem um plano completamente insano: montar uma equipe e invadir a Colômbia! Porém, essa aventura sai de controle quando ele decide sequestrar o filho do líder do quartel para trocá-lo pela vida de seu irmão."
+        },
+        {
+            "id": "hjf2rea3r",
+            "title": "O Protetor 3: Capítulo Final",
+            "genre": "Ação",
+            "duration": "1h:49m",
+            "classification": "6.8/10",
+            "cover": "https://image.tmdb.org/t/p/original/AnJOKbSQsp0QqiUhsQooqFRjPsD.jpg",
+            "origin": "Filme de Hollywood",
+            "language": [
+                "Inglês",
+                "Português",
+                "Francês"
+            ],
+            "sinopsis": "Sentindo-se em casa no sul da Itália, o ex-agente Robert McCall logo descobre que seus novos amigos estão sob o controle dos chefes do crime local. À medida que os acontecimentos se tornam mortais, McCall sabe o que tem de fazer: tornar-se o protetor dos seus amigos, enfrentando a máfia."
+        },
+        {
+            "id": "hjf2ced3r",
+            "title": "Agente das Sombras",
+            "genre": "Ação",
+            "duration": "1h:44m",
+            "classification": "4.8/10",
+            "cover": "https://image.tmdb.org/t/p/original/jvXtUDQMmlNmrjA1kw1fHA9IcBX.jpg",
+            "origin": "Filme de Hollywood",
+            "language": [
+                "Mandarim",
+                "Português"
+            ],
+            "sinopsis": "Travis Block trabalha para o FBI, mas não é um agente comum. Ele se move pelo mundo das sombras, pelos bastidores, ajudando agentes secretos que se veem em uma situação da qual não conseguem escapar. Ele acaba envolvido em uma conspiração quando um agente secreto questiona os seus superiores. Agora, cabe a Block encontrar esse sujeito, e também descobrir se não está sendo usado pelo homem em quem confia."
+        },
+        {
+            "id": "hjf2redqr",
+            "title": "As Agentes 355",
+            "genre": "Ação",
+            "duration": "2h:02m",
+            "classification": "5.6/10",
+            "cover": "https://image.tmdb.org/t/p/original/sz6z3k9UGeVmkC6YkdY0iTj9Ipk.jpg",
+            "origin": "Filme de Hollywood",
+            "language": [
+                "Português",
+                "Inglês",
+                "Italiano"
+            ],
+            "sinopsis": "Quando uma arma ultrassecreta cai nas mãos de um grupo de mercenários que ameaçam o mundo, a agente da CIA Mace Brown terá que unir forças para uma missão letal com a agente alemã Marie; a ex-membro do MI6, especialista em computadores, Khadijah; a psicóloga Graciela, e com Lin Mi Sheng, uma mulher misteriosa que está rastreando todos os seus movimentos."
+        }
+    ],
+    "notifications": [
+        {
+            "day": "Hoje",
+            "data": [
+                {
+                    "type": 2,
+                    "title": "Actualização de Cartão de Crédito",
+                    "text": "Cartão de crédito adicionado com sucesso"
+                },
+                {
+                    "type": 1,
+                    "title": "Desconto de 10% disponível",
+                    "text": "Faça uma reserva hoje e receba um desconto em 10% no valor do bilhete"
+                },
+                {
+                    "type": 2,
+                    "title": "Actualização de Cartão de Crédito",
+                    "text": "Cartão de crédito adicionado com sucesso"
+                },
+                {
+                    "type": 1,
+                    "title": "Desconto de 10% disponível",
+                    "text": "Faça uma reserva hoje e receba um desconto em 10% no valor do bilhete"
+                }
+            ],
+            "id": "e6c9"
+        },
+        {
+            "day": "Ontem",
+            "data": [
+                {
+                    "type": 3,
+                    "title": "Actualização de Assento",
+                    "text": "Um assento está disponível para uma sessão do filme: Vingadores: Guerra Infinita"
+                }
+            ],
+            "id": "1d0e"
+        },
+        {
+            "day": "15/06/2024",
+            "data": [
+                {
+                    "type": 0,
+                    "title": "Senha Actualizada",
+                    "text": "A sua senha foi actualizada com sucesso"
+                }
+            ],
+            "id": "9bff"
+        }
+    ],
+    "sessions": [
+        {
+            "id": "abcde",
+            "movieId": "hjf2ced3r",
+            "room": "133C",
+            "dateTime": "2024-07-28T13:30:00",
+            "ticketPrice": 350,
+            "seats": [
+                {
+                    "A": "available",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "available",
+                    "G": "reserved",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "available",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "reserved",
+                    "F": "reserved",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "available",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "reserved",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "reserved"
+                }
+            ]
+        },
+        {
+            "id": "efghi",
+            "movieId": "hjf2redqr",
+            "room": "205A",
+            "dateTime": "2024-07-10T15:00:00",
+            "ticketPrice": 375,
+            "seats": [
+                {
+                    "A": "reserved",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "reserved"
+                },
+                {
+                    "A": "available",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "available",
+                    "G": "available",
+                    "H": "reserved"
+                },
+                {
+                    "A": "reserved",
+                    "B": "available",
+                    "C": "available",
+                    "D": "reserved",
+                    "E": "available",
+                    "F": "available",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "available",
+                    "E": "reserved",
+                    "F": "reserved",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "reserved",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "available",
+                    "G": "reserved",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "reserved",
+                    "E": "available",
+                    "F": "available",
+                    "G": "available",
+                    "H": "reserved"
+                },
+                {
+                    "A": "reserved",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "reserved"
+                }
+            ]
+        },
+        {
+            "id": "fghij",
+            "movieId": "hjf2red3r",
+            "room": "208B",
+            "dateTime": "2024-07-05T13:00:00",
+            "ticketPrice": 420,
+            "seats": [
+                {
+                    "A": "available",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "reserved",
+                    "E": "available",
+                    "F": "available"
+                },
+                {
+                    "A": "reserved",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "available",
+                    "E": "reserved",
+                    "F": "available",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "reserved",
+                    "B": "available",
+                    "C": "available",
+                    "D": "reserved",
+                    "E": "available",
+                    "F": "available",
+                    "G": "available",
+                    "H": "reserved"
+                },
+                {
+                    "A": "available",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "reserved",
+                    "E": "available",
+                    "F": "available",
+                    "G": "reserved",
+                    "H": "reserved"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "reserved",
+                    "D": "available",
+                    "E": "available",
+                    "F": "reserved",
+                    "G": "available",
+                    "H": "reserved"
+                },
+                {
+                    "A": "reserved",
+                    "B": "available",
+                    "C": "reserved",
+                    "D": "available",
+                    "E": "reserved",
+                    "F": "available",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "reserved",
+                    "E": "available",
+                    "F": "available"
+                }
+            ]
+        },
+        {
+            "id": "ghijk",
+            "movieId": "hjf2red3r",
+            "room": "210C",
+            "dateTime": "2024-07-03T19:30:00",
+            "ticketPrice": 480,
+            "seats": [
+                {
+                    "A": "reserved",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "reserved",
+                    "E": "reserved",
+                    "F": "reserved"
+                },
+                {
+                    "A": "available",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "reserved",
+                    "E": "reserved",
+                    "F": "reserved",
+                    "G": "available",
+                    "H": "reserved"
+                },
+                {
+                    "A": "reserved",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "reserved",
+                    "E": "reserved",
+                    "F": "available",
+                    "G": "reserved",
+                    "H": "reserved"
+                },
+                {
+                    "A": "available",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "available",
+                    "E": "reserved",
+                    "F": "reserved",
+                    "G": "available",
+                    "H": "reserved"
+                },
+                {
+                    "A": "reserved",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "available",
+                    "E": "reserved",
+                    "F": "reserved",
+                    "G": "available",
+                    "H": "reserved"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "reserved",
+                    "D": "available",
+                    "E": "reserved",
+                    "F": "available",
+                    "G": "reserved",
+                    "H": "available"
+                },
+                {
+                    "A": "reserved",
+                    "B": "available",
+                    "C": "reserved",
+                    "D": "available",
+                    "E": "available",
+                    "F": "reserved"
+                }
+            ]
+        },
+        {
+            "id": "hijkl",
+            "movieId": "hjf2redqr",
+            "room": "220D",
+            "dateTime": "2024-07-05T12:00:00",
+            "ticketPrice": 525,
+            "seats": [
+                {
+                    "A": "available",
+                    "B": "reserved",
+                    "C": "reserved",
+                    "D": "available",
+                    "E": "available",
+                    "F": "available"
+                },
+                {
+                    "A": "reserved",
+                    "B": "reserved",
+                    "C": "reserved",
+                    "D": "reserved",
+                    "E": "reserved",
+                    "F": "available",
+                    "G": "available",
+                    "H": "reserved"
+                },
+                {
+                    "A": "reserved",
+                    "B": "available",
+                    "C": "reserved",
+                    "D": "available",
+                    "E": "available",
+                    "F": "available",
+                    "G": "available",
+                    "H": "reserved"
+                },
+                {
+                    "A": "available",
+                    "B": "reserved",
+                    "C": "reserved",
+                    "D": "available",
+                    "E": "reserved",
+                    "F": "available",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "reserved",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "available",
+                    "E": "reserved",
+                    "F": "available",
+                    "G": "available",
+                    "H": "reserved"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "reserved",
+                    "D": "available",
+                    "E": "reserved",
+                    "F": "reserved",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "reserved",
+                    "B": "reserved",
+                    "C": "reserved",
+                    "D": "available",
+                    "E": "available",
+                    "F": "reserved"
+                }
+            ]
+        },
+        {
+            "id": "ijklm",
+            "movieId": "hjf2rea3r",
+            "room": "240E",
+            "dateTime": "2024-07-09T18:30:00",
+            "ticketPrice": 315,
+            "seats": [
+                {
+                    "A": "reserved",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "reserved",
+                    "E": "reserved",
+                    "F": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "reserved",
+                    "D": "available",
+                    "E": "reserved",
+                    "F": "available",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "reserved",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "reserved",
+                    "G": "available",
+                    "H": "reserved"
+                },
+                {
+                    "A": "available",
+                    "B": "reserved",
+                    "C": "reserved",
+                    "D": "available",
+                    "E": "available",
+                    "F": "reserved",
+                    "G": "available",
+                    "H": "reserved"
+                },
+                {
+                    "A": "available",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "reserved",
+                    "G": "reserved",
+                    "H": "available"
+                },
+                {
+                    "A": "reserved",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "reserved",
+                    "E": "available",
+                    "F": "available",
+                    "G": "reserved",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "reserved",
+                    "D": "reserved",
+                    "E": "available",
+                    "F": "reserved"
+                }
+            ]
+        },
+        {
+            "id": "jklmn",
+            "movieId": "hjf2eed3r",
+            "room": "250F",
+            "dateTime": "2024-07-10T13:30:00",
+            "ticketPrice": 420,
+            "seats": [
+                {
+                    "A": "reserved",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "reserved",
+                    "E": "available",
+                    "F": "reserved"
+                },
+                {
+                    "A": "reserved",
+                    "B": "reserved",
+                    "C": "reserved",
+                    "D": "reserved",
+                    "E": "reserved",
+                    "F": "available",
+                    "G": "reserved",
+                    "H": "reserved"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "reserved",
+                    "D": "reserved",
+                    "E": "reserved",
+                    "F": "available",
+                    "G": "reserved",
+                    "H": "available"
+                },
+                {
+                    "A": "reserved",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "available",
+                    "E": "reserved",
+                    "F": "reserved",
+                    "G": "reserved",
+                    "H": "available"
+                },
+                {
+                    "A": "reserved",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "reserved",
+                    "F": "reserved",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "reserved",
+                    "B": "reserved",
+                    "C": "reserved",
+                    "D": "reserved",
+                    "E": "reserved",
+                    "F": "available",
+                    "G": "reserved",
+                    "H": "reserved"
+                },
+                {
+                    "A": "available",
+                    "B": "reserved",
+                    "C": "reserved",
+                    "D": "available",
+                    "E": "available",
+                    "F": "reserved"
+                }
+            ]
+        },
+        {
+            "id": "klmno",
+            "movieId": "hjf2red3r",
+            "room": "300G",
+            "dateTime": "2024-07-07T16:00:00",
+            "ticketPrice": 450,
+            "seats": [
+                {
+                    "A": "reserved",
+                    "B": "reserved",
+                    "C": "reserved",
+                    "D": "reserved",
+                    "E": "reserved",
+                    "F": "reserved"
+                },
+                {
+                    "A": "reserved",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "reserved",
+                    "G": "reserved",
+                    "H": "reserved"
+                },
+                {
+                    "A": "reserved",
+                    "B": "reserved",
+                    "C": "reserved",
+                    "D": "available",
+                    "E": "reserved",
+                    "F": "reserved",
+                    "G": "reserved",
+                    "H": "reserved"
+                },
+                {
+                    "A": "reserved",
+                    "B": "available",
+                    "C": "available",
+                    "D": "reserved",
+                    "E": "reserved",
+                    "F": "reserved",
+                    "G": "available",
+                    "H": "reserved"
+                },
+                {
+                    "A": "reserved",
+                    "B": "available",
+                    "C": "reserved",
+                    "D": "reserved",
+                    "E": "reserved",
+                    "F": "available",
+                    "G": "available",
+                    "H": "reserved"
+                },
+                {
+                    "A": "reserved",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "reserved",
+                    "E": "available",
+                    "F": "available",
+                    "G": "available",
+                    "H": "reserved"
+                },
+                {
+                    "A": "available",
+                    "B": "reserved",
+                    "C": "reserved",
+                    "D": "reserved",
+                    "E": "available",
+                    "F": "reserved"
+                }
+            ]
+        },
+        {
+            "id": "lmnop",
+            "movieId": "hjf2re03r",
+            "room": "310H",
+            "dateTime": "2024-08-01T15:30:00",
+            "ticketPrice": 390,
+            "seats": [
+                {
+                    "A": "reserved",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "reserved",
+                    "E": "available",
+                    "F": "available"
+                },
+                {
+                    "A": "reserved",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "available",
+                    "E": "reserved",
+                    "F": "available",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "reserved",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "reserved",
+                    "G": "reserved",
+                    "H": "reserved"
+                },
+                {
+                    "A": "available",
+                    "B": "reserved",
+                    "C": "reserved",
+                    "D": "reserved",
+                    "E": "available",
+                    "F": "available",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "reserved",
+                    "B": "available",
+                    "C": "available",
+                    "D": "reserved",
+                    "E": "available",
+                    "F": "reserved",
+                    "G": "available",
+                    "H": "reserved"
+                },
+                {
+                    "A": "available",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "reserved",
+                    "E": "available",
+                    "F": "reserved",
+                    "G": "available",
+                    "H": "reserved"
+                },
+                {
+                    "A": "reserved",
+                    "B": "available",
+                    "C": "reserved",
+                    "D": "available",
+                    "E": "reserved",
+                    "F": "reserved"
+                }
+            ]
+        },
+        {
+            "id": "abcde",
+            "movieId": "hjf2ced3r",
+            "room": "133C",
+            "dateTime": "2024-07-05T13:30:00",
+            "ticketPrice": 350,
+            "seats": [
+                {
+                    "A": "available",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "available",
+                    "G": "reserved",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "available",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "reserved",
+                    "F": "reserved",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "available",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "reserved",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "reserved"
+                }
+            ]
+        },
+        {
+            "id": "fghij",
+            "movieId": "hjf2rea3r",
+            "room": "205B",
+            "dateTime": "2024-07-06T18:15:00",
+            "ticketPrice": 300,
+            "seats": [
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "reserved",
+                    "E": "available",
+                    "F": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "reserved",
+                    "F": "reserved",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "available",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "reserved",
+                    "F": "reserved",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "available",
+                    "G": "available",
+                    "H": "reserved"
+                },
+                {
+                    "A": "available",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "available",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "reserved",
+                    "F": "reserved"
+                }
+            ]
+        },
+        {
+            "id": "klmno",
+            "movieId": "hjf2red3r",
+            "room": "109A",
+            "dateTime": "2024-07-09T20:00:00",
+            "ticketPrice": 400,
+            "seats": [
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "reserved",
+                    "E": "available",
+                    "F": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "reserved",
+                    "E": "available",
+                    "F": "available",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "reserved",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "available",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "available",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "available",
+                    "G": "available",
+                    "H": "reserved"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "available"
+                }
+            ]
+        },
+        {
+            "id": "pqrst",
+            "movieId": "hjf2redqr",
+            "room": "215D",
+            "dateTime": "2024-07-08T14:45:00",
+            "ticketPrice": 320,
+            "seats": [
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "reserved",
+                    "E": "available",
+                    "F": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "available",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "available",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "reserved",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "available",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "available",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "available",
+                    "F": "reserved",
+                    "G": "available",
+                    "H": "available"
+                },
+                {
+                    "A": "available",
+                    "B": "available",
+                    "C": "available",
+                    "D": "available",
+                    "E": "reserved",
+                    "F": "available"
+                }
+            ]
+        }
+    ]
+}

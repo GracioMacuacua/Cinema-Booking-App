@@ -4,8 +4,14 @@ import EditText from "@/components/EditText";
 
 const Categories = () => {
   return (
-    <Screen style={{ alignItems: "center", justifyContent: "center" }}>
-      <EditText pageText="Página de Categorias" linkText="Ir para Stack" path="/" />
+    <Screen
+      contentContainerStyle={{ alignItems: "center", justifyContent: "center" }}
+    >
+      <EditText
+        pageText="Página de Categorias"
+        linkText="Ir para Stack"
+        path="/"
+      />
     </Screen>
   );
 };

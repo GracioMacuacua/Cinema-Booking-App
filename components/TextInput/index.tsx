@@ -65,38 +65,36 @@ const _TextInput = (props: _TextInputProps) => {
 
   return (
     <View style={styles.container}>
-      <View style={{ flexDirection: "column", flex: 1 }}>
-        <Text
-          style={[
-            styles.label,
-            {
-              bottom: focusAnim.interpolate({
-                inputRange: [0, 1],
-                outputRange: [10, 32],
-              }),
-              fontSize: focusAnim.interpolate({
-                inputRange: [0, 1],
-                outputRange: [15, 10],
-              }),
-            },
-            labelStyle,
-          ]}
-        >
-          {label}
-        </Text>
-        <TextInput
-          {...otherProps}
-          style={[
-            styles.textinput,
-            { paddingRight: props.secureTextEntry ? 0 : 8 },
-          ]}
-          secureTextEntry={props.secureTextEntry && !passwordVisible}
-          onChangeText={handleChangeText}
-          onFocus={handleFocus}
-          onBlur={handleBlur}
-          value={value}
-        />
-      </View>
+      <Text
+        style={[
+          styles.label,
+          {
+            bottom: focusAnim.interpolate({
+              inputRange: [0, 1],
+              outputRange: [10, 32],
+            }),
+            fontSize: focusAnim.interpolate({
+              inputRange: [0, 1],
+              outputRange: [15, 10],
+            }),
+          },
+          labelStyle,
+        ]}
+      >
+        {label}
+      </Text>
+      <TextInput
+        {...otherProps}
+        style={[
+          styles.textinput,
+          { marginRight: props.secureTextEntry || passwordVisible ? 38 : 8 },
+        ]}
+        secureTextEntry={props.secureTextEntry && !passwordVisible}
+        onChangeText={handleChangeText}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+        value={value}
+      />
       {(props.secureTextEntry || passwordVisible) && (
         <ExtendedButton
           icon={({ color }) =>
@@ -107,6 +105,9 @@ const _TextInput = (props: _TextInputProps) => {
             )
           }
           style={{
+            position: "absolute",
+            right: 0,
+            height: "100%",
             borderWidth: 0,
             alignItems: "center",
             justifyContent: "center",
@@ -120,10 +121,9 @@ const _TextInput = (props: _TextInputProps) => {
 
 export default _TextInput;
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   container: {
     position: "relative",
-    flexDirection: "row",
     borderColor: Colors.baseColors.border,
     borderWidth: StyleSheet.hairlineWidth,
     borderRadius: 10,

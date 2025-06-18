@@ -1,0 +1,51 @@
+{
+    "expo": {
+        "name": "Cinema Booking App",
+        "slug": "cinemabookingapp",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "icon": "./assets/images/icon.png",
+        "scheme": "cinemabookingapp",
+        "userInterfaceStyle": "automatic",
+        "splash": {
+            "image": "./assets/images/splash.png",
+            "resizeMode": "contain",
+            "backgroundColor": "#FFFFFF"
+        },
+        "assetBundlePatterns": [
+            "**/*"
+        ],
+        "ios": {
+            "supportsTablet": true,
+            "googleServicesFile": "./config/GoogleService-Info.plist",
+            "bundleIdentifier": "com.graciomacuacua.cinemabookingapp"
+        },
+        "android": {
+            "adaptiveIcon": {
+                "foregroundImage": "./assets/images/adaptive-icon.png",
+                "backgroundColor": "#FFFFFF"
+            },
+            "googleServicesFile": "./config/google-services.json",
+            "package": "com.graciomacuacua.cinemabookingapp"
+        },
+        "plugins": [
+            "expo-router",
+            "expo-font",
+            "expo-secure-store",
+            "@react-native-firebase/app",
+            "@react-native-firebase/auth"
+        ],
+        "experiments": {
+            "typedRoutes": true
+        },
+        "extra": {
+            "router": {
+                "origin": false
+            },
+            "eas": {
+                "projectId": "b16cd032-1a40-4c67-8a32-471b4d78778d"
+            }
+        },
+        "owner": "graciomacuacua"
+    }
+}

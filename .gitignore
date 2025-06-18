@@ -43,8 +43,13 @@ expo-env.d.ts
 TAREFAS.txt
 android/
 ios/
-config/*
+# config/*
 
 Auth.tsx
-db.json
-app.json
+# db.json
+# app.json
+app.example.json
+
+.env
+
+config/

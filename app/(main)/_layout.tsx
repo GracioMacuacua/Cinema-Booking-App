@@ -28,7 +28,10 @@ const Layout = () => {
         name="notifications/index"
         options={{ title: "Notificações" }}
       />
-      <Stack.Screen name="categories/index" options={{ title: "Categorias" }} />
+      <Stack.Screen 
+        name="categories/index" 
+        options={{ title: "Categorias" }} 
+      />
       <Stack.Screen
         name="moviedetails/index"
         options={{ title: "Detalhes do Filme" }}
@@ -44,6 +47,14 @@ const Layout = () => {
       <Stack.Screen
         name="selectseats/index"
         options={{ title: "Seleção de Assentos" }}
+      />
+      <Stack.Screen
+        name="checkout/index"
+        options={{ title: "Checkout" }}
+      />
+      <Stack.Screen
+        name="ticket/index"
+        options={{ title: "Ver Bilhete" }}
       />
     </Stack>
   );

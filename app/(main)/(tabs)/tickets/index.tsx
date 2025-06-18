@@ -4,7 +4,12 @@ import EditText from "@/components/EditText";
 
 const Tickets = () => {
   return (
-    <Screen style={{ alignItems: "center", justifyContent: "center" }}>
+    <Screen
+      contentContainerStyle={{
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       <EditText
         pageText="Página de Bilhetes"
         linkText="Ir para Stack"

@@ -41,39 +41,36 @@ type NotificationDataProps = {
   type: NotificationType;
 };
 
-const Card = React.memo(
-  ({ data }: { data: NotificationDataProps }) => {
-    const insets = useSafeAreaInsets();
-    const calc =
-      (Dimensions.get("screen").height - insets.top - insets.bottom) / 6 -
-      12 * 6;
-    const ICON_HOLDER_WIDTH = calc > 55 ? calc : 55;
-    const PADDING = Dimensions.get("screen").height / 150 + 5;
+const Card = React.memo(({ data }: { data: NotificationDataProps }) => {
+  const insets = useSafeAreaInsets();
+  const calc =
+    (Dimensions.get("screen").height - insets.top - insets.bottom) / 6 - 12 * 6;
+  const ICON_HOLDER_WIDTH = calc > 55 ? calc : 55;
+  const PADDING = Dimensions.get("screen").height / 150 + 5;
 
-    const Icon = () => getIcon(data.type);
+  const Icon = () => getIcon(data.type);
 
-    return (
-      <View style={styles.wrapper} darkColor="#1B1415">
-        <View
-          style={[
-            styles.icon,
-            { width: ICON_HOLDER_WIDTH, height: ICON_HOLDER_WIDTH },
-          ]}
-          darkColor="#1B1415"
-        >
-          <Icon />
-        </View>
-        <View
-          style={{ flex: 1, justifyContent: "space-between", marginLeft: 10 }}
-          darkColor="#1B1415"
-        >
-          <Text style={styles.title}>{data.title}</Text>
-          <Text style={styles.text}>{data.text}</Text>
-        </View>
+  return (
+    <View style={styles.wrapper} darkColor="#1B1415">
+      <View
+        style={[
+          styles.icon,
+          { width: ICON_HOLDER_WIDTH, height: ICON_HOLDER_WIDTH },
+        ]}
+        darkColor="#1B1415"
+      >
+        <Icon />
       </View>
-    );
-  }
-);
+      <View
+        style={{ flex: 1, justifyContent: "space-between", marginLeft: 10 }}
+        darkColor="#1B1415"
+      >
+        <Text style={styles.title}>{data.title}</Text>
+        <Text style={styles.text}>{data.text}</Text>
+      </View>
+    </View>
+  );
+});
 
 const PADDING = Dimensions.get("screen").height / 150 + 5;
 
@@ -91,15 +88,7 @@ const Loader = ({ count }: { count: number }) => {
         .map((_, i) => (
           <View style={styles.wrapper} darkColor="#1B1415" key={i}>
             <Skeleton circle width={ICON_HOLDER_WIDTH} />
-            <View
-              style={{
-                flex: 1,
-                justifyContent: "space-between",
-                marginLeft: 10,
-                gap: 15,
-              }}
-              darkColor="#1B1415"
-            >
+            <View style={styles.loaderContentHolder} darkColor="#1B1415">
               <Skeleton />
               <View style={{ gap: 5 }}>
                 <Skeleton height={8} />
@@ -136,5 +125,11 @@ const styles = StyleSheet.create({
     fontFamily: "PoppinsRegular",
     fontSize: 14,
     color: Colors.baseColors.border,
+  },
+  loaderContentHolder: {
+    flex: 1,
+    justifyContent: "space-between",
+    marginLeft: 10,
+    gap: 15,
   },
 });

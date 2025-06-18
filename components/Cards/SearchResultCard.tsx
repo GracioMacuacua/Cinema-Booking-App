@@ -36,11 +36,9 @@ const Card = React.memo(({ data }: { data: SearchDataProps }) => {
   );
 });
 
-
-
 export default Card;
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   container: {
     width: "100%",
     flexDirection: "row",
@@ -48,6 +46,7 @@ const styles = StyleSheet.create({
     padding: 15,
     borderRadius: 15,
     gap: 15,
+    elevation: 1.5,
   },
   image: {
     width: 75,

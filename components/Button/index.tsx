@@ -3,6 +3,7 @@ import { Link } from "expo-router";
 import Colors from "@/constants/Colors";
 import { useThemeColor } from "@/hooks/useThemeColor";
 import { LinkProps } from "expo-router/build/link/Link";
+import { RFValue } from "react-native-responsive-fontsize";
 import { ActivityIndicator, StyleSheet, TextStyle } from "react-native";
 import { Button, _ButtonProps, Text, _TextProps, View } from "../Themed";
 
@@ -51,7 +52,8 @@ export const LinkButton = (props: LinkButtonProps) => {
 };
 
 export const ExtendedButton = (props: ExtendedButtonProps) => {
-  const { icon, text, loading, style, textStyle, ...otherProps } = props;
+  const { icon, text, disabled, loading, style, textStyle, ...otherProps } =
+    props;
 
   const Icon = icon
     ? icon({ color: useThemeColor({}, "text"), size: 1 })
@@ -59,6 +61,7 @@ export const ExtendedButton = (props: ExtendedButtonProps) => {
 
   return (
     <Button
+      disabled={disabled || loading}
       style={[
         styles.wrapper,
         {

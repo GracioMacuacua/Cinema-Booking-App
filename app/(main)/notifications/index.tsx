@@ -21,7 +21,7 @@ const Notifications = () => {
     "notfications",
     async () => {
       const response = await axios.get(
-        `http://192.168.171.108:3000/notifications?_page=${page}`
+        process.env.EXPO_PUBLIC_API_URL + `/notifications?_page=${page}`
       );
       return response.data;
     }
@@ -29,12 +29,12 @@ const Notifications = () => {
   const [page, setPage] = useState(0);
 
   return (
-    <Screen>
+    <View style={[styles.listContainer]}>
       {isLoading ? (
-        <View style={[styles.listContainer]}>
+        <>
           <Notification.Loader count={2} />
           <Notification.Loader count={4} />
-        </View>
+        </>
       ) : (
         <SectionList
           sections={data ?? []}
@@ -45,10 +45,10 @@ const Notifications = () => {
             <Text style={styles.header}>{day}</Text>
           )}
           ListEmptyComponent={<EmptyList />}
-          contentContainerStyle={styles.listContainer}
+          showsVerticalScrollIndicator={false}
         />
       )}
-    </Screen>
+    </View>
   );
 };
 
@@ -58,7 +58,8 @@ const styles = StyleSheet.create({
   listContainer: {
     flex: 1,
     gap: 10,
-    width: Dimensions.get("screen").width - 40,
+    paddingHorizontal: 20,
+    paddingTop: 15
   },
   header: {
     fontFamily: "PoppinsBold",

@@ -2,10 +2,15 @@ import { Stack } from "expo-router";
 import { useFonts } from "expo-font";
 import useAuth from "@/hooks/useAuth";
 import { useEffect, useState } from "react";
+import { useColorScheme } from "react-native";
 import * as SplashScreen from "expo-splash-screen";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { GlobalDataProvider, useGlobalData } from "@/context/GlobalData";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import Colors from "@/constants/Colors";
 
 export { ErrorBoundary } from "expo-router";
 
@@ -14,14 +19,23 @@ const queryClient = new QueryClient();
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  // AsyncStorage.clear()
+  const colorScheme = useColorScheme() as "light" | "dark";
+//   AsyncStorage.clear()
 
   return (
-    <GlobalDataProvider>
-      <QueryClientProvider client={queryClient}>
-        <RootLayoutNav />
-      </QueryClientProvider>
-    </GlobalDataProvider>
+    <SafeAreaProvider>
+      <SafeAreaView style={{ flex: 1, backgroundColor: colorScheme === "light" ? Colors.light.background : Colors.dark.background, }} >
+        <GestureHandlerRootView style={{ flex: 1 }}>
+          <BottomSheetModalProvider>
+            <GlobalDataProvider>
+              <QueryClientProvider client={queryClient}>
+                <RootLayoutNav />
+              </QueryClientProvider>
+            </GlobalDataProvider>
+          </BottomSheetModalProvider>
+        </GestureHandlerRootView>
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 
@@ -41,6 +55,7 @@ const RootLayoutNav = () => {
   const checkFirstLaunch = async () => {
     const hasLaunched = await AsyncStorage.getItem("@RNCBA:hasLaunched");
     if (hasLaunched === "true") {
+      false;
       setHasLaunched(true);
     } else {
       setHasLaunched(false);

@@ -99,18 +99,24 @@ const CheckOPTModal: React.FC<CheckOPTModalProps> = React.memo(
 
     const checkOTP = () => {
       setFetching(true);
-      confirmCode(
-        code,
-        () => {
-          setFetching(false);
-          onClose();
-          setTimeout(onOpenNext, 2000);
-        },
-        (error) => {
-          setFetching(false);
-          console.log(error);
-        }
-      );
+      //   confirmCode(
+      //     code,
+      //     () => {
+      //       setFetching(false);
+      //       onClose();
+      //       setTimeout(onOpenNext, 2000);
+      //     },
+      //     (error) => {
+      //       setFetching(false);
+      //       console.log(error);
+      //     }
+      //   );
+
+      setTimeout(() => {
+        setFetching(false);
+        onClose();
+        setTimeout(onOpenNext, 2000);
+      }, 3000);
     };
 
     return (
@@ -168,10 +174,12 @@ const CheckOPTModal: React.FC<CheckOPTModalProps> = React.memo(
 interface SuccessModalProps extends ModalProps {
   visible: boolean;
   onClose: () => void;
+  children?: React.ReactElement;
+  path?: string;
 }
 
 const SuccessModal: React.FC<SuccessModalProps> = React.memo(
-  ({ visible, onClose }) => {
+  ({ visible, onClose, children, path }) => {
     const handlePress = (
       e: GestureResponderEvent | React.MouseEvent<HTMLAnchorElement, MouseEvent>
     ) => {

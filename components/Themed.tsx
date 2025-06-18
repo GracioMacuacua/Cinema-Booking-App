@@ -4,7 +4,7 @@ import {
   TouchableOpacity,
   TouchableOpacityProps,
   TextInputProps,
-  TextInput as DefultTextInput,
+  TextInput as DefaultTextInput,
 } from "react-native";
 import { useThemeColor } from "@/hooks/useThemeColor";
 
@@ -59,5 +59,5 @@ export const TextInput = (props: _TextInputProps) => {
   const { style, lightColor, darkColor, ...otherProps } = props;
   const color = useThemeColor({ light: lightColor, dark: darkColor }, "text");
 
-  return <DefultTextInput style={[{ color }, style]} {...otherProps} />;
+  return <DefaultTextInput style={[{ color }, style]} {...otherProps} />;
 };
