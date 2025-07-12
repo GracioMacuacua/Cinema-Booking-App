@@ -10,11 +10,11 @@ import { Image } from "expo-image";
 import { useQuery } from "react-query";
 import Colors from "@/constants/Colors";
 import Screen from "@/components/Screen";
-import SeatsMap, { SeatProps } from "@/components/SeatMap";
 import { View, Text } from "@/components/Themed";
-import React, { useCallback, useEffect, useState } from "react";
 import { ExtendedButton } from "@/components/Button";
+import SeatsMap, { SeatProps } from "@/components/SeatMap";
 import { router, useLocalSearchParams } from "expo-router";
+import React, { useCallback, useEffect, useState } from "react";
 
 export type SessionProps = {
   id: string;
@@ -55,8 +55,8 @@ const SelectSeats: React.FC = () => {
       cacheTime: 0,
     }
   );
-  const [selectedSeats, setSelectedSeats] = useState<string[]>([]);
   const colorScheme = useColorScheme() as "light" | "dark";
+  const [selectedSeats, setSelectedSeats] = useState<string[]>([]);
   const [bookingDetails, setBookingDetails] = useState<BookingDetails>({
     price: 0,
     seats: [],
@@ -111,125 +111,135 @@ const SelectSeats: React.FC = () => {
   //   console.log(bookingDetails);
 
   return (
-    <Screen style={{ paddingHorizontal: 0 }}>
-      <View style={{ paddingTop: 15, paddingHorizontal: 15, alignItems: "center" }}>
+    <Screen
+      contentContainerStyle={{
+        paddingHorizontal: 0,
+      }}
+    >
+      <View
+        style={{ paddingTop: 15, paddingHorizontal: 15, alignItems: "center" }}
+      >
         <Image
           source={require("../../../assets/images/screen.png")}
           style={{ width: "75%", height: 65 }}
           contentFit="contain"
         />
       </View>
-      <View style={styles.seatsContainer}>
-        {isLoading ? (
-          <View style={{ height: "51.3%" }}>
-            <ActivityIndicator color={"#FF515A"} size={45} />
-          </View>
-        ) : (
-          <SeatsMap
-            sessions={sessions ?? []}
-            selectedSeats={selectedSeats}
-            handleSelectSeat={handleSelectSeat}
-            selectedDay={selectedDay}
-          />
-        )}
-      </View>
-      <View
-        style={styles.actionsContainer}
-        lightColor="#F6F6F6"
-        darkColor="#221C1D"
-      >
-        <Text style={styles.text}>Selecione a data e a hora</Text>
-        <ScrollView
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          contentContainerStyle={styles.sessionDetailsContainer}
-        >
-          {sessions &&
-            sessions.map((session, id) => (
-              <TouchableOpacity key={id} onPress={() => setSelectedDay(id)}>
-                <View
-                  style={styles.dayWrapper}
-                  lightColor={selectedDay === id ? "#FF515A" : "#EEEEEE"}
-                  darkColor={selectedDay === id ? "#FF515A" : "#30292A"}
-                >
-                  <Text
-                    style={{
-                      fontFamily: "PoppinsRegular",
-                      fontSize: 16,
-                    }}
-                    lightColor={selectedDay === id ? "#FFFFFF" : "#130D0E"}
-                  >
-                    {DAYS_OF_WEEK[new Date(session.dateTime).getDay()]}
-                  </Text>
-                  <Text
-                    style={{
-                      fontFamily: "PoppinsBold",
-                      fontSize: 18,
-                    }}
-                    lightColor={selectedDay === id ? "#FFFFFF" : "#130D0E"}
-                  >
-                    {new Date(session.dateTime).getDate()}
-                  </Text>
-                </View>
-              </TouchableOpacity>
-            ))}
-        </ScrollView>
-        <ScrollView
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          contentContainerStyle={styles.sessionDetailsContainer}
-        >
-          {sessions &&
-            sessions.map((session, id) => (
-              <TouchableOpacity key={id} onPress={() => setSelectedHour(id)}>
-                <View
-                  style={styles.hourWrapper}
-                  lightColor={selectedHour === id ? "#FF515A" : "#EEEEEE"}
-                  darkColor={selectedHour === id ? "#FF515A" : "#30292A"}
-                >
-                  <Text
-                    style={{ fontFamily: "PoppinsRegular", fontSize: 16 }}
-                    lightColor={selectedHour === id ? "#FFFFFF" : "#130D0E"}
-                  >
-                    {session.dateTime.split("T")[1].slice(0, 5)}
-                  </Text>
-                </View>
-              </TouchableOpacity>
-            ))}
-        </ScrollView>
+      <View style={{ marginTop: 15, justifyContent: "space-between", flex: 1 }}>
+        <View style={styles.seatsContainer}>
+          {isLoading ? (
+            <View style={{ height: "51.3%" }}>
+              <ActivityIndicator color={"#FF515A"} size={45} />
+            </View>
+          ) : (
+            <SeatsMap
+              sessions={sessions ?? []}
+              selectedSeats={selectedSeats}
+              handleSelectSeat={handleSelectSeat}
+              selectedDay={selectedDay}
+            />
+          )}
+        </View>
         <View
-          style={{
-            flexDirection: "row",
-            width: "100%",
-            paddingHorizontal: 20,
-            gap: 15,
-          }}
+          style={styles.actionsContainer}
           lightColor="#F6F6F6"
           darkColor="#221C1D"
         >
+          <Text style={styles.title}>Selecione a data e a hora</Text>
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={styles.sessionDetailsContainer}
+          >
+            {sessions &&
+              sessions.map((session, id) => (
+                <TouchableOpacity key={id} onPress={() => setSelectedDay(id)}>
+                  <View
+                    style={styles.dayWrapper}
+                    lightColor={selectedDay === id ? "#FF515A" : "#EEEEEE"}
+                    darkColor={selectedDay === id ? "#FF515A" : "#30292A"}
+                  >
+                    <Text
+                      style={{
+                        fontFamily: "PoppinsRegular",
+                        fontSize: 14,
+                      }}
+                      lightColor={selectedDay === id ? "#FFFFFF" : "#130D0E"}
+                    >
+                      {DAYS_OF_WEEK[new Date(session.dateTime).getDay()]}
+                    </Text>
+                    <Text
+                      style={{
+                        fontFamily: "PoppinsBold",
+                        fontSize: 16,
+                      }}
+                      lightColor={selectedDay === id ? "#FFFFFF" : "#130D0E"}
+                    >
+                      {new Date(session.dateTime).getDate()}
+                    </Text>
+                  </View>
+                </TouchableOpacity>
+              ))}
+          </ScrollView>
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={styles.sessionDetailsContainer}
+          >
+            {sessions &&
+              sessions.map((session, id) => (
+                <TouchableOpacity key={id} onPress={() => setSelectedHour(id)}>
+                  <View
+                    style={styles.hourWrapper}
+                    lightColor={selectedHour === id ? "#FF515A" : "#EEEEEE"}
+                    darkColor={selectedHour === id ? "#FF515A" : "#30292A"}
+                  >
+                    <Text
+                      style={{ fontFamily: "PoppinsRegular", fontSize: 14 }}
+                      lightColor={selectedHour === id ? "#FFFFFF" : "#130D0E"}
+                    >
+                      {session.dateTime.split("T")[1].slice(0, 5)}
+                    </Text>
+                  </View>
+                </TouchableOpacity>
+              ))}
+          </ScrollView>
           <View
-            style={{ justifyContent: "space-between" }}
+            style={{
+              flexDirection: "row",
+              width: "100%",
+              paddingHorizontal: 20,
+              gap: 15,
+            }}
             lightColor="#F6F6F6"
             darkColor="#221C1D"
           >
-            <Text style={{ fontFamily: "PoppinsRegular", fontSize: 16 }}>
-              Custo Total
-            </Text>
-            <Text style={styles.text}>{bookingDetails.price} MT</Text>
+            <View
+              style={{ justifyContent: "space-between" }}
+              lightColor="#F6F6F6"
+              darkColor="#221C1D"
+            >
+              <Text style={{ fontFamily: "PoppinsRegular", fontSize: 14 }}>
+                Custo Total
+              </Text>
+              <Text style={[styles.title, { fontSize: 16 }]}>
+                {bookingDetails.price} MT
+              </Text>
+            </View>
+            <ExtendedButton
+              style={{
+                flex: 1,
+                borderColor: "transparent",
+                backgroundColor: "#FF515A",
+              }}
+              textStyle={{
+                color: Colors.baseColors.text,
+              }}
+              text="Efectuar Agendamento"
+              disabled={!selectedSeats.length}
+              onPress={handleBook}
+            />
           </View>
-          <ExtendedButton
-            style={{
-              flex: 1,
-              borderColor: "transparent",
-              backgroundColor: "#FF515A",
-            }}
-            textStyle={{
-              color: Colors.baseColors.text,
-            }}
-            text="Efectuar Agendamento"
-            disabled={!selectedSeats.length}
-            onPress={handleBook}
-          />
         </View>
       </View>
     </Screen>
@@ -242,25 +252,24 @@ const styles = StyleSheet.create({
   seatsContainer: {
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 10,
     paddingHorizontal: 15,
     gap: 5,
   },
   actionsContainer: {
-    flex: 1,
+    // flex: 1,
     gap: 20,
     alignItems: "center",
     justifyContent: "space-between",
-    // marginHorizontal: -20,
     marginTop: 5,
-    paddingVertical: 15,
+    paddingTop: 15,
+    paddingBottom: 8,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
   },
-  text: {
+  title: {
     fontFamily: "PoppinsBold",
     textAlign: "center",
-    fontSize: 17,
+    fontSize: 18,
   },
   sessionDetailsContainer: {
     gap: 15,

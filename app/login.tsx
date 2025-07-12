@@ -105,7 +105,7 @@ const Login = () => {
           />
         </View>
         <View style={styles.footer}>
-          <Text style={{ fontSize: 15 }}>Não tem uma conta?</Text>
+          <Text style={{ fontSize: 14 }}>Não tem uma conta?</Text>
           <Link href="/register" style={styles.link}>
             Registe-se
           </Link>
@@ -127,12 +127,12 @@ export const styles = StyleSheet.create({
   },
   title: {
     fontFamily: "PoppinsBold",
-    fontSize: 30,
+    fontSize: 24,
   },
   text: {
     fontFamily: "PoppinsRegular",
     textAlign: "center",
-    fontSize: 16,
+    fontSize: 14,
     color: Colors.baseColors.border,
   },
   divider: {
@@ -149,7 +149,7 @@ export const styles = StyleSheet.create({
   },
   link: {
     color: Colors.baseColors.button,
-    fontSize: 15,
+    fontSize: 14,
     paddingHorizontal: 5,
     paddingVertical: 5,
   },

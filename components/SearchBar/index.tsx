@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   },
   textInput: {
     fontFamily: "PoppinsRegular",
-    fontSize: 16,
+    fontSize: 14,
     padding: 4,
   },
 });

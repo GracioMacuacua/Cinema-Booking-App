@@ -1,4 +1,3 @@
-import React from "react";
 import {
   StyleSheet,
   Dimensions,
@@ -6,19 +5,20 @@ import {
   ScrollView,
   TouchableOpacity,
 } from "react-native";
+import React from "react";
 import axios from "axios";
 import { Image } from "expo-image";
 import { Link } from "expo-router";
 import { useQuery } from "react-query";
 import Colors from "@/constants/Colors";
 import Avatar from "@/components/Avatar";
+import Screen from "@/components/Screen";
 import { Octicons } from "@expo/vector-icons";
 import SearchBar from "@/components/SearchBar";
 import { Text, View } from "@/components/Themed";
-import Screen from "@/components/Screen";
 import * as MovieCard from "@/components/Cards/MovieCard";
-import { ExtendedButton, LinkButton } from "@/components/Button";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { ExtendedButton, LinkButton } from "@/components/Button";
 
 const GENRES = [
   { key: "Romance", value: require("../../../../assets/images/romance.png") },
@@ -143,22 +143,31 @@ const Home = () => {
           </View>
           <ScrollView
             horizontal
+            style={{
+              marginHorizontal: -15,
+            }}
             contentContainerStyle={styles.movieScroll}
             showsHorizontalScrollIndicator={false}
           >
             {isLoadingLatest ? (
-              <MovieCard.Loader
-                width={Dimensions.get("screen").width * 0.6}
-                count={3}
-              />
+              <>
+                <View />
+                <MovieCard.Loader
+                  width={Dimensions.get("screen").width * 0.6}
+                  count={3}
+                />
+              </>
             ) : errorLatest ? (
               <Text style={styles.errorText}>
                 Ocorreu um erro ao carregar os filmes
               </Text>
             ) : (
-              latestMovies?.map((movie) => (
-                <MovieCard.Card key={movie.id} data={movie} />
-              ))
+              <>
+                <View />
+                {latestMovies?.map((movie) => (
+                  <MovieCard.Card key={movie.id} data={movie} />
+                ))}
+              </>
             )}
           </ScrollView>
         </View>
@@ -171,26 +180,35 @@ const Home = () => {
           </View>
           <ScrollView
             horizontal
+            style={{
+              marginHorizontal: -15,
+            }}
             contentContainerStyle={styles.movieScroll}
             showsHorizontalScrollIndicator={false}
           >
             {isLoadingTrending ? (
-              <MovieCard.Loader
-                width={Dimensions.get("screen").width * 0.35}
-                count={3}
-              />
+              <>
+                <View />
+                <MovieCard.Loader
+                  width={Dimensions.get("screen").width * 0.35}
+                  count={3}
+                />
+              </>
             ) : errorTrending ? (
               <Text style={styles.errorText}>
                 Ocorreu um erro ao carregar os filmes
               </Text>
             ) : (
-              trendingMovies?.map((movie) => (
-                <MovieCard.Card
-                  key={movie.id}
-                  data={movie}
-                  cardWidth={Dimensions.get("screen").width * 0.35}
-                />
-              ))
+              <>
+                <View />
+                {trendingMovies?.map((movie) => (
+                  <MovieCard.Card
+                    key={movie.id}
+                    data={movie}
+                    cardWidth={Dimensions.get("screen").width * 0.35}
+                  />
+                ))}
+              </>
             )}
           </ScrollView>
         </View>
@@ -221,7 +239,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontFamily: "PoppinsRegular",
-    fontSize: 20,
+    fontSize: 14,
   },
   title: {
     fontFamily: "PoppinsBold",
@@ -254,12 +272,15 @@ const styles = StyleSheet.create({
     borderRadius: 15,
   },
   movieScroll: {
+    flexGrow: 1,
+    flexDirection: "row",
+    justifyContent: "center",
     paddingVertical: 10,
     gap: 15,
   },
   errorText: {
     color: "red",
-    fontSize: 16,
+    fontSize: 14,
     fontFamily: "PoppinsRegular",
   },
 });

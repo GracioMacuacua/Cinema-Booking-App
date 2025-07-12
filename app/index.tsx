@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: "PoppinsBold",
-    fontSize: RFValue(28),
+    fontSize: RFValue(24),
   },
   text: {
     fontFamily: "PoppinsRegular",

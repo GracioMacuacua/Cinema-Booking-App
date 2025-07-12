@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontFamily: "PoppinsRegular",
-    fontSize: 16,
+    fontSize: 14,
     textAlign: "center",
     verticalAlign: "middle",
   },

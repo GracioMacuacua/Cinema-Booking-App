@@ -75,7 +75,7 @@ const _TextInput = (props: _TextInputProps) => {
             }),
             fontSize: focusAnim.interpolate({
               inputRange: [0, 1],
-              outputRange: [15, 10],
+              outputRange: [14, 10],
             }),
           },
           labelStyle,
@@ -138,7 +138,7 @@ export const styles = StyleSheet.create({
   },
   textinput: {
     fontFamily: "PoppinsRegular",
-    fontSize: 16,
+    fontSize: 14,
     paddingVertical: 10,
     paddingLeft: 10,
     backgroundColor: "transparent",

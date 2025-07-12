@@ -1,3 +1,4 @@
+import axios from "axios";
 import { Image } from "expo-image";
 import { useQuery } from "react-query";
 import Colors from "@/constants/Colors";
@@ -6,10 +7,9 @@ import { Text, View } from "@/components/Themed";
 import React, { PropsWithChildren } from "react";
 import { ExtendedButton } from "@/components/Button";
 import { router, useLocalSearchParams } from "expo-router";
+import { MovieCardProps } from "@/components/Cards/MovieCard";
 import { StyleSheet, Dimensions, ScrollView } from "react-native";
 import { AntDesign, Ionicons, MaterialIcons } from "@expo/vector-icons";
-import axios from "axios";
-import { MovieCardProps } from "@/components/Cards/MovieCard";
 
 const ColumnItem = ({ children }: PropsWithChildren) => {
   return (
@@ -41,10 +41,10 @@ const Movie = () => {
 
   return (
     <Screen
-      style={{
-        gap: 15,
-        paddingBottom: 15,
+      style={{}}
+      contentContainerStyle={{
         paddingTop: 10,
+        paddingBottom: 5,
       }}
     >
       <View
@@ -99,23 +99,24 @@ const Movie = () => {
       </View>
       <View>
         <Text style={styles.title}>{data?.title}</Text>
-        {/* <Text style={[styles.columnItemText, { fontSize: 16 }]}>{}</Text> */}
       </View>
       <View style={{ marginTop: 10 }}>
-        <Text style={styles.title}>Sinopse</Text>
+        <Text style={[styles.title, { fontSize: 16 }]}>Sinopse</Text>
         <Text style={styles.sinopsis}>{data?.sinopsis}</Text>
       </View>
-      <ExtendedButton
-        text="Selecionar Assento"
-        style={{
-          backgroundColor: Colors.baseColors.button,
-          borderColor: "transparent",
-        }}
-        textStyle={{
-          color: Colors.baseColors.text,
-        }}
-        onPress={handlePress}
-      />
+      <View style={styles.buttonContainer}>
+        <ExtendedButton
+          text="Selecionar Assento"
+          style={{
+            backgroundColor: Colors.baseColors.button,
+            borderColor: "transparent",
+          }}
+          textStyle={{
+            color: Colors.baseColors.text,
+          }}
+          onPress={handlePress}
+        />
+      </View>
     </Screen>
   );
 };
@@ -152,7 +153,12 @@ const styles = StyleSheet.create({
   },
   sinopsis: {
     fontFamily: "PoppinsRegular",
-    fontSize: 16,
+    fontSize: 14,
     textAlign: "justify",
+  },
+  buttonContainer: {
+    flexDirection: "column",
+    flex: 1,
+    justifyContent: "flex-end",
   },
 });

@@ -51,6 +51,6 @@ const styles = StyleSheet.create({
   },
   text: {
     fontFamily: "PoppinsBold",
-    fontSize: 18,
+    fontSize: 20,
   },
 });

@@ -20,11 +20,19 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const colorScheme = useColorScheme() as "light" | "dark";
-//   AsyncStorage.clear()
+  AsyncStorage.clear()
 
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={{ flex: 1, backgroundColor: colorScheme === "light" ? Colors.light.background : Colors.dark.background, }} >
+      <SafeAreaView
+        style={{
+          flex: 1,
+          backgroundColor:
+            colorScheme === "light"
+              ? Colors.light.background
+              : Colors.dark.background,
+        }}
+      >
         <GestureHandlerRootView style={{ flex: 1 }}>
           <BottomSheetModalProvider>
             <GlobalDataProvider>

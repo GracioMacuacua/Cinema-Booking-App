@@ -10,13 +10,13 @@ import { MaterialIcons } from "@expo/vector-icons";
 import { SessionProps } from "@/app/(main)/selectseats";
 
 const SeatsLegenda = ({ color, status }: { color: string; status: string }) => {
-    console.log("Legenda Actualizada")
+  console.log("Legenda Actualizada");
   return (
     <View
       style={{
         flexDirection: "row",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "flex-start",
         gap: 5,
       }}
     >
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
   },
   seatsLegenda: {
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "space-evenly",
     width: "100%",
     marginVertical: 10,
   },

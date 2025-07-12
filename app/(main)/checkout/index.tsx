@@ -50,7 +50,7 @@ const Input = (props: InputProps) => {
 };
 
 const Checkout = () => {
-  const [value, setValue] = useState("mastercard");
+  const [value, setValue] = useState("");
   const { cost, seats, sessionId } = useLocalSearchParams();
   const colorScheme = useColorScheme() as "light" | "dark";
   const bottomSheetRef = useRef<BottomSheetModal>(null);
@@ -67,7 +67,7 @@ const Checkout = () => {
 
   return (
     <>
-      <Screen style={{ paddingBottom: 15 }}>
+      <Screen contentContainerStyle={{ paddingBottom: 5 }}>
         <View style={styles.container}>
           {/** Card do filme */}
 
@@ -80,7 +80,9 @@ const Checkout = () => {
               contentFit="cover"
             />
             <View style={[Styles.column, { backgroundColor: "transparent" }]}>
-              <Text style={styles.title}>Vingadores: Guerra infinita</Text>
+              <Text style={[styles.title, { fontSize: 16 }]}>
+                Vingadores: Guerra infinita
+              </Text>
               <Text style={Styles.lightText}>Filme de Hollywood</Text>
               <View
                 style={{
@@ -90,8 +92,8 @@ const Checkout = () => {
                 }}
               >
                 <AntDesign name="star" color={"#FF9901"} size={20} />
-                <Text style={[Styles.lightText, { fontSize: 14 }]}>N/C</Text>
-                <Text style={[Styles.lightText, { fontSize: 14 }]}>
+                <Text style={[Styles.lightText, { fontSize: 12 }]}>N/C</Text>
+                <Text style={[Styles.lightText, { fontSize: 12 }]}>
                   (Sem Avaliação)
                 </Text>
               </View>
@@ -112,7 +114,7 @@ const Checkout = () => {
                 gap: 10,
                 marginBottom: 15,
               }}
-              onPress={() => handleSelect("mastercard")}
+              onPress={() => handleSelect("m-pesa")}
             >
               <View
                 style={{
@@ -123,22 +125,19 @@ const Checkout = () => {
                 }}
               >
                 <Image
-                  source={require("../../../assets/images/mastercard.jpg")}
-                  style={{ width: 50, height: 50 }}
+                  source={require("../../../assets/images/mpesa.png")}
+                  style={{ width: 50, height: 50, borderRadius: 10 }}
                   contentFit="contain"
                 />
               </View>
               <View style={{ flex: 1 }}>
-                <Text style={styles.title}>MasterCard</Text>
+                <Text style={[styles.title, { fontSize: 16 }]}>M-Pesa</Text>
                 <Text style={Styles.lightText}>{"56** **** **** *658"}</Text>
               </View>
-              <RadioButton
-                value="mastercard"
-                color={Colors.baseColors.button}
-              />
+              <RadioButton value="m-pesa" color={Colors.baseColors.button} />
             </TouchableOpacity>
             <ExtendedButton
-              text="Adicionar Novo Cartão"
+              text="Adicionar Cartão"
               icon={() => (
                 <AntDesign
                   name="plus"
@@ -157,7 +156,7 @@ const Checkout = () => {
                 gap: 10,
                 marginTop: 15,
               }}
-              onPress={() => handleSelect("paypal")}
+              onPress={() => handleSelect("e-mola")}
             >
               <View
                 style={{
@@ -168,15 +167,15 @@ const Checkout = () => {
                 }}
               >
                 <Image
-                  source={require("../../../assets/images/paypal.png")}
-                  style={{ width: 50, height: 50 }}
+                  source={require("../../../assets/images/emola.png")}
+                  style={{ width: 50, height: 50, borderRadius: 10 }}
                   contentFit="contain"
                 />
               </View>
               <View style={{ flex: 1 }}>
-                <Text style={styles.title}>PayPal</Text>
+                <Text style={[styles.title, { fontSize: 16 }]}>E-Mola</Text>
               </View>
-              <RadioButton value="paypal" color={Colors.baseColors.button} />
+              <RadioButton value="e-mola" color={Colors.baseColors.button} />
             </TouchableOpacity>
           </RadioButton.Group>
 
@@ -214,8 +213,8 @@ const Checkout = () => {
 
       <CustomBottomSheet ref={bottomSheetRef}>
         <View style={{ flex: 1, alignItems: "center" }}>
-          <Text style={styles.title}>Adicionar Novo Cartão</Text>
-          <Text style={[Styles.lightText, { fontSize: 16 }]}>
+          <Text style={styles.title}>Adicionar Cartão</Text>
+          <Text style={[Styles.lightText, { fontSize: 14 }]}>
             Adicione os dados do cartão aqui
           </Text>
           <View style={{ width: "100%", flex: 1, marginTop: 20, gap: 15 }}>
@@ -252,7 +251,7 @@ const Checkout = () => {
 
       {/** Modal de sucesso na criação de bilhete */}
 
-
+      
     </>
   );
 };
@@ -270,11 +269,11 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: "PoppinsBold",
-    fontSize: 17,
+    fontSize: 18,
   },
   text: {
     fontFamily: "PoppinsRegular",
-    fontSize: 16,
+    fontSize: 14,
   },
   divider: {
     borderTopWidth: StyleSheet.hairlineWidth,

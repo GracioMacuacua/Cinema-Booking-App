@@ -8,17 +8,13 @@ import React, {
 import Colors from "@/constants/Colors";
 
 const Screen = (props: ScrollViewProps) => {
-  const { children, style, ...otherProps } = props;
+  const { children, style, contentContainerStyle, ...otherProps } = props;
   const colorScheme = useColorScheme() as "light" | "dark";
 
   return (
     <ScrollView
       style={[
         {
-          flex: 1,
-        //   marginTop: 10,
-          paddingHorizontal: 15,
-          height: Dimensions.get("window").height,
           backgroundColor:
             colorScheme == "light"
               ? Colors.light.background
@@ -26,8 +22,16 @@ const Screen = (props: ScrollViewProps) => {
         },
         style,
       ]}
-      {...otherProps}
+      contentContainerStyle={[
+        {
+          flexGrow: 1,
+          paddingHorizontal: 15,
+          // backgroundColor: "#0F0",
+        },
+        contentContainerStyle,
+      ]}
       showsVerticalScrollIndicator={false}
+      {...otherProps}
     >
       {children}
     </ScrollView>

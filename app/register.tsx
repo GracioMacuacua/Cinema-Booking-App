@@ -111,7 +111,7 @@ const Register = () => {
             />
           </View>
           <View style={styles.footer}>
-            <Text style={{ fontSize: 15 }}>Já possui uma conta?</Text>
+            <Text style={{ fontSize: 14 }}>Já possui uma conta?</Text>
             <Link href="/login" style={styles.link}>
               Entrar
             </Link>

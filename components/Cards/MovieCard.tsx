@@ -70,10 +70,11 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: "PoppinsRegular",
-    fontSize: 16,
+    fontSize: 14,
   },
   text: {
     fontFamily: "PoppinsRegular",
+    fontSize: 12,
     color: Colors.baseColors.border,
   },
 });
